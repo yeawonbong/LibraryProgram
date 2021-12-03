@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
-public class LibraryProgram() {
+public class LibraryProgram {
 	private final int MAX_BOOK_LENGTH = 10;
     Book [] BookList = new Book[MAX_BOOK_LENGTH];
     int BookLength = 0;
@@ -12,7 +12,9 @@ public class LibraryProgram() {
         while (true) {
             int input = -1;
             System.out.println("----------------------");
-            System.out.println("원하시는 동작을 입력해주세요.");
+            System.out.println("Library Program");
+            System.out.println("----------------------");
+            System.out.println("What do you want to do? (digit only)");
             System.out.println("1. new Book");
             System.out.println("2. delete Book");
             System.out.println("3. search Book");
@@ -51,8 +53,8 @@ public class LibraryProgram() {
 
     public void newBook() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("추가할 도서의 정보를 입력해주세요.");
-        System.out.println("도서 제목: ");
+        System.out.println("Input the information of the book to add.");
+        System.out.print("Title: ");
         /*
         0. 리스트 수 검사해서 배열크기보다 크지 않은 지 예외 처리
         1. 버퍼로 받아서 유효성 검사
